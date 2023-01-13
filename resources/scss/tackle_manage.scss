@@ -1,0 +1,190 @@
+h1 {
+  position: relative;
+  color:#ffffff;
+  z-index:30;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 3rem;
+}
+
+#add_tackle {
+  position: relative;
+  z-index:30;
+}
+
+#tackleform {
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  color: #ffffff;
+  display: flex;
+  flex-flow: column;
+}
+
+.info {
+  width: 100%;
+  margin: auto;
+}
+.photo {
+  margin: auto;
+
+  img {
+    min-width: 20vw;
+    max-height: 20rem;
+    margin: auto;
+    background-color: #ffffff;
+  }
+
+  input {
+    width: 20rem;
+  }
+}
+
+.tackleinfo {
+  text-align: right;
+  padding: 2rem;
+
+  .photo {
+    float: left;
+  }
+}
+
+.fishinfo {
+  text-align: left;
+  padding: 2rem;
+
+  .photo {
+    float: right;
+  }
+}
+
+.updateButton {
+  margin-top: 3rem;
+  margin: auto;
+}
+
+#required {
+  color: #fd0606;
+  font-size: 0.5rem;
+}
+
+ul {
+  position: relative;
+  z-index:30;
+  color:#06fd8a;
+
+  li {
+    list-style: none;
+  }
+  
+  a {
+    color:#06fd8a;
+    text-decoration: none;
+    }
+}
+
+.content {
+  position: relative;
+  z-index: 33;
+}
+
+
+select {
+  position:relative;
+  z-index: 30;
+}
+
+.search {
+  width: 100%;
+  display: inline-flex;
+
+  .search_image {
+    background-image: url("../js/Pages/images/Search.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width:1.8rem;
+    min-height: 1.8rem;
+    border-radius: 20px;
+    position: relative;
+    z-index: 30;
+    display: inline-block;
+    margin-right: 1rem;
+  }
+}
+
+
+.ourTackle {
+  position:relative;
+  margin: auto;
+  width: 50em;
+
+  a {
+    color: #ffffff;
+    font-weight: bold;
+    padding-left: 5rem;
+    padding-top: 3rem;
+    font-size: 0.5rem;
+  };
+
+  ul {
+    position: relative;
+    padding-left: unset;
+    text-align: center;
+  }
+
+  li {
+    border-radius: 15px;
+    background-color: #e4eeeda1;
+
+  }
+
+  .sharePhoto {
+    height: 13rem;
+  }
+  img {
+    position: relative;
+    max-width:13rem;
+    max-height: 10rem;
+  }
+  .ourPhoto {
+    display: flex;
+  }
+
+  .tackleShare {
+    padding-top: 30px;
+    display: inline-block;
+  }
+
+  .fishingShare {
+    display: inline-block;
+  }
+
+  .goodAction {
+    width:100%;
+
+    p {
+      margin: 0 2rem 2rem auto;
+      width: 1.5rem;
+      background-color: aqua;
+      border-radius:50px;
+      background-image: url("../js/Pages/images/goodButton.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    a {
+      padding-top: 0;
+      padding-left: 2rem;
+    }
+
+    span {
+      position: relative;
+      padding: 0;
+      color: #ffffff;
+      font-size: 14px;
+      text-align: right;
+      font-weight: bold;
+    }
+  }
+  }

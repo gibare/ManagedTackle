@@ -1,0 +1,245 @@
+html {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+img {
+  width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  background-size: cover;
+  background-position: center center;
+}
+
+nav {
+  display: flex;
+  position: relative;
+  color: #ffffff;
+  height: 5rem;
+  width: 100%;
+  left: 50px;
+  top: 16px;
+  border-radius: 10px;
+}
+nav :visited {
+  color: inherit;
+}
+nav #tackle_home {
+  color: #ffffff;
+  height: 51px;
+  left: 50px;
+  top: 21px;
+  border-radius: nullpx;
+  font-family: IBM Plex Mono;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 62px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+nav .wrapper {
+  padding: 0 10px;
+  height: 51px;
+  left: 1015px;
+  top: 16px;
+  border-radius: 10px;
+  font-family: IBM Plex Mono;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-right: 23px;
+  margin-left: auto;
+}
+nav .wrapper .text-blue-700 {
+  line-height: 51px;
+  padding-right: 46px;
+  height: 23px;
+  width: 105px;
+  left: 1015px;
+  top: 31px;
+  border-radius: nullpx;
+}
+
+form {
+  position: relative;
+  min-height: 35rem;
+  width: 40rem;
+  margin: 0 auto;
+  border-radius: 10px;
+  display: contents;
+  vertical-align: middle;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+form #userform {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+form label {
+  display: inline-block;
+  text-align: right;
+  width: 10rem;
+  padding-right: 1rem;
+}
+form label .flex {
+  display: block;
+}
+form input {
+  display: inline-block;
+  text-align: left;
+  height: 2rem;
+  width: 10rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  border: none;
+}
+form .flex {
+  bottom: 5rem;
+  position: static;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+form .flex :visited {
+  color: inherit;
+}
+form img {
+  position: inherit;
+  width: 14vw;
+  min-height: 2.5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  background: #4EF469;
+  height: 3rem;
+  width: 10rem;
+  border-radius: 10px;
+  padding: 0.75rem;
+  box-shadow: 0px 7px 7px 7px rgba(0, 0, 0, 0.2509803922);
+  color: rgba(255, 255, 255, 0.9098039216);
+  font-family: IBM Plex Mono;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 31px;
+  letter-spacing: 0em;
+  text-align: center;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+button :hover {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+button :active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+a {
+  color: #ffffff;
+}
+a :visited {
+  color: inherit;
+}
+
+select {
+  display: inline-block;
+  text-align: left;
+  height: 2rem;
+  width: 10rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  border: none;
+}
+
+#section_form {
+  position: absolute;
+  color: #ffffff;
+  display: flex;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+#sendform {
+  position: absolute;
+  color: #ffffff;
+  display: flex;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  flex-flow: column;
+}
+#sendform .form_background {
+  background: rgba(170, 190, 189, 0.631372549);
+}
+
+#delete_form {
+  position: absolute;
+  color: #ffffff;
+  display: flex;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  flex-flow: column;
+  background: rgba(170, 190, 189, 0.631372549);
+}
+
+.p-6 {
+  position: absolute;
+  color: #ffffff;
+  display: flex;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  flex-flow: column;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+/*# sourceMappingURL=Top_style.css.map */
