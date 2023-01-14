@@ -42,50 +42,49 @@ const goodUser = props.user;
             >
             <div id="share_info">
             <div class="tackleShare">
-              <div v-if="tackle.tackle_photo" class="sharePhoto">
+              <div class="ourPhoto">
+              <div v-if="tackle.tackle_photo">
                 <img :src="tackle.tackle_photo" alt="" @click="countUp">
               </div>
               <div v-else class="sharePhoto">
                 <img src="@/Pages/images/20200504_noimage.png" alt="">
               </div>
-                <div>
-                  <p>タックル名</p>
-                  <p>{{ tackle.tackle_name }}</p>
-                </div>
-                <div>
-                  <p>メーカー名</p>
-                  <p>{{ tackle.maker_name }}</p>
-                </div>
-                <div>
-                  <p>購入金額</p>
-                  <p>{{ tackle.purchase_fee }}円</p>
-                </div>
-                <div>
-                  <p>詳細情報</p>
-                  <p>{{ tackle.detailed_info }}</p>
-                </div>
-              </div>
-
-              <div class="fishingShare">
-              <div v-if="tackle.fishingresult_photo" class="sharePhoto">
+              <div v-if="tackle.fishingresult_photo">
                 <img :src="tackle.fishingresult_photo" alt="">
               </div>
               <div v-else class="sharePhoto">
                 <img src="@/Pages/images/20200504_noimage.png" alt="">
               </div>
-                <div>
-                  <p>魚種</p>
-                  <p>{{ tackle.fish_category }}</p>
-                </div>
-                <div>
-                  <p>サイズ</p>
-                  <p>{{ tackle.size }}</p>
-                </div>
-                <div>
-                  <p>コンディション</p>
-                  <p>{{ tackle.condition }}</p>
-                </div>
+            </div>
+                  <table>
+                    <tr>
+                      <th>タックル名</th>
+                      <th>{{ tackle.tackle_name }}</th>
+                      <th>魚種</th>
+                      <th>{{ tackle.fish_category }}</th>
+                    </tr>
+                    <tr>
+                      <th>メーカー名</th>
+                      <th>{{ tackle.maker_name }}</th>
+                      <th>サイズ</th>
+                      <th>{{ tackle.size }}</th>
+                    </tr>
+                    <tr>
+                      <th>購入金額</th>
+                      <th>{{ tackle.purchase_fee }}円</th>
+                      <th>コンディション</th>
+                  <th>{{ tackle.condition }}</th>
+                    </tr>
+                    <tr>
+                      <th>詳細情報</th>
+                      <th>{{ tackle.detailed_info }}</th>
+                    </tr>
+                    <tr>
+                      
+                    </tr>
+                  </table>
               </div>
+
               <div class="goodAction">
                 <p v-if="tackle.goodsuser_id == goodUser">
                     <Link

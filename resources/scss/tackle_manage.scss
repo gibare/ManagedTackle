@@ -50,15 +50,6 @@ h1 {
   }
 }
 
-.fishinfo {
-  text-align: left;
-  padding: 2rem;
-
-  .photo {
-    float: right;
-  }
-}
-
 .updateButton {
   margin-top: 3rem;
   margin: auto;
@@ -119,13 +110,10 @@ select {
   margin: auto;
   width: 50em;
 
-  a {
+  table {
+    font-size: 14px;
     color: #ffffff;
-    font-weight: bold;
-    padding-left: 5rem;
-    padding-top: 3rem;
-    font-size: 0.5rem;
-  };
+  }
 
   ul {
     position: relative;
@@ -139,13 +127,15 @@ select {
 
   }
 
-  .sharePhoto {
-    height: 13rem;
+  .ourPhoto {
+    justify-content: center;
+
   }
   img {
+    padding: 0 0.5rem;
+    width:13rem;
     position: relative;
-    max-width:13rem;
-    max-height: 10rem;
+    height: 10rem;
   }
   .ourPhoto {
     display: flex;
@@ -156,15 +146,15 @@ select {
     display: inline-block;
   }
 
-  .fishingShare {
-    display: inline-block;
-  }
-
   .goodAction {
     width:100%;
 
     p {
-      margin: 0 2rem 2rem auto;
+      text-align: right;
+
+    button {
+      height: 1.75rem;
+      margin: 0 1rem 0 auto;
       width: 1.5rem;
       background-color: aqua;
       border-radius:50px;
@@ -175,7 +165,7 @@ select {
 
     a {
       padding-top: 0;
-      padding-left: 2rem;
+      padding-left: 1rem;
     }
 
     span {
@@ -183,8 +173,9 @@ select {
       padding: 0;
       color: #ffffff;
       font-size: 14px;
-      text-align: right;
       font-weight: bold;
+      padding-right: 1rem;
     }
+  }
   }
   }

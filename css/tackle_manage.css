@@ -48,14 +48,6 @@ h1 {
   float: left;
 }
 
-.fishinfo {
-  text-align: left;
-  padding: 2rem;
-}
-.fishinfo .photo {
-  float: right;
-}
-
 .updateButton {
   margin-top: 3rem;
   margin: auto;
@@ -111,12 +103,9 @@ select {
   margin: auto;
   width: 50em;
 }
-.ourTackle a {
+.ourTackle table {
+  font-size: 14px;
   color: #ffffff;
-  font-weight: bold;
-  padding-left: 5rem;
-  padding-top: 3rem;
-  font-size: 0.5rem;
 }
 .ourTackle ul {
   position: relative;
@@ -127,13 +116,14 @@ select {
   border-radius: 15px;
   background-color: rgba(228, 238, 237, 0.631372549);
 }
-.ourTackle .sharePhoto {
-  height: 13rem;
+.ourTackle .ourPhoto {
+  justify-content: center;
 }
 .ourTackle img {
+  padding: 0 0.5rem;
+  width: 13rem;
   position: relative;
-  max-width: 13rem;
-  max-height: 10rem;
+  height: 10rem;
 }
 .ourTackle .ourPhoto {
   display: flex;
@@ -142,14 +132,15 @@ select {
   padding-top: 30px;
   display: inline-block;
 }
-.ourTackle .fishingShare {
-  display: inline-block;
-}
 .ourTackle .goodAction {
   width: 100%;
 }
 .ourTackle .goodAction p {
-  margin: 0 2rem 2rem auto;
+  text-align: right;
+}
+.ourTackle .goodAction p button {
+  height: 1.75rem;
+  margin: 0 1rem 0 auto;
   width: 1.5rem;
   background-color: aqua;
   border-radius: 50px;
@@ -157,15 +148,15 @@ select {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.ourTackle .goodAction a {
+.ourTackle .goodAction p a {
   padding-top: 0;
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
-.ourTackle .goodAction span {
+.ourTackle .goodAction p span {
   position: relative;
   padding: 0;
   color: #ffffff;
   font-size: 14px;
-  text-align: right;
   font-weight: bold;
+  padding-right: 1rem;
 }
