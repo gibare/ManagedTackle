@@ -24,10 +24,15 @@ const submit = () => {
 </script>
 
 <template>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>新規登録</title>
+        <meta name="description" content="新規ユーザーを登録します。">
+    </head>
     <img src="../images/SignUp_Login.png" alt="" class="signup-img" />
     <section>
     <Layout>
-        <Head title="Register" />
         <form @submit.prevent="submit">
             <div id="userform">
             <div>

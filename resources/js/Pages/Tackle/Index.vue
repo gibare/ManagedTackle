@@ -12,6 +12,12 @@ const props = defineProps({
 </script>
 
 <template>
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>マイタックル</title>
+        <meta name="description" content="タックルを新規登録・編集します。">
+    </head>
   <img src="../images/tackle.png" alt="" class="tackle-img" />
   <section>
     <UserLayout>

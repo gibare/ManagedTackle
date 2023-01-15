@@ -35,6 +35,12 @@ const updatePassword = () => {
 </script>
 
 <template>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>パスワード変更</title>
+        <meta name="description" content="パスワードを変更します。">
+    </head>
     <img src="./images/changepage.png" alt="" class="change-img" />
     <section id="section_form">
         <div class="change_form">

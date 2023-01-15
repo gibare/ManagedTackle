@@ -8,7 +8,6 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
 import { InertiaLink, useForm, usePage } from '@inertiajs/inertia-vue3' 
 import { ref } from 'vue';
 import UserLayout from '@/Components/UserLayout.vue'
-import img from '@/images/tackle_edit.png'
 
 
 function submit() {
@@ -48,6 +47,12 @@ const fishingFile = (event) => {
 </script>
 
 <template>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>タックル追加</title>
+        <meta name="description" content="タックル・釣果を追加します。">
+    </head>
   <img src="../images/tackle_edit.png" alt="" class="tackle_edit-img" />
   <section>
     <UserLayout>
@@ -59,7 +64,7 @@ const fishingFile = (event) => {
                 <div class="info">
                 <div class="photo">
                 <img v-if="previewtackle" :src="previewtackle" alt="">
-                <img v-else src="../images/20200504_noimage.png" alt="">
+                <img v-else src="../images/NoImage.png" alt="">
                 <input
                     id="tacklePhoto"
                     @input="form.tacklePhoto = $event.target.files[0]"
@@ -196,7 +201,7 @@ const fishingFile = (event) => {
             <div class="info">
                 <div class="photo">
                     <img v-if="previewFishing" :src="previewFishing" alt="">
-                    <img v-else src="../images/20200504_noimage.png" alt="">
+                    <img v-else src="../images/NoImage.png" alt="">
                     <input
                         id="fishingPhoto"
                         @input="form.fishingPhoto = $event.target.files[0]"

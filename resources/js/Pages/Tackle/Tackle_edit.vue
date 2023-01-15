@@ -8,7 +8,6 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
 import { Link, useForm, usePage } from '@inertiajs/inertia-vue3';
 import UserLayout from '@/Components/UserLayout.vue';
 import { ref } from 'vue';
-import img from '@/images/tackle_edit.png';
 
 const props = defineProps({
     mustVerifyEmail: Boolean,
@@ -40,6 +39,12 @@ const form = useForm({
 </script>
 
 <template>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>タックル編集</title>
+        <meta name="description" content="タックルと釣果を編集します。">
+    </head>
   <img src="../images/tackle_edit.png" alt="" class="tackle_edit-img" />
   <section>
     <UserLayout>
@@ -54,7 +59,7 @@ const form = useForm({
                         <img :src="form.tackle_photo">
                     </span>
                     <span v-else>
-                        <img src="../images/20200504_noimage.png">
+                        <img src="../images/NoImage.png">
                     </span>
                     <input
                         id="tacklePhoto"
@@ -197,7 +202,7 @@ const form = useForm({
                     <img :src="form.fishingResult_photo">
                 </span>
                 <span v-else>
-                        <img src="../images/20200504_noimage.png">
+                        <img src="../images/NoImage.png">
                 </span>
                 <input
                     id="fishingPhoto"

@@ -20,33 +20,41 @@ h1 {
   color: #ffffff;
   display: flex;
   flex-flow: column;
-}
 
-.info {
-  width: 100%;
-  margin: auto;
-}
-.photo {
-  margin: auto;
+  .tackleinfo {
 
-  img {
-    min-width: 20vw;
-    max-height: 20rem;
-    margin: auto;
-    background-color: #ffffff;
+    .info {
+      padding-left: 2rem;
+    }
+
+    .photo {
+      float: right;
+      padding-right: 2rem;
+      text-align: center;
+
+      img {
+        min-width: 20rem;
+        min-height: 15rem;
+      }
+    }
   }
 
-  input {
-    width: 20rem;
-  }
-}
+  .fishinfo {
 
-.tackleinfo {
-  text-align: right;
-  padding: 2rem;
+    .info {
+      text-align: right;
+      padding-right: 3rem;
+    }
+    .photo {
+      float: left;
+      padding-left: 2rem;
+      text-align: center;
 
-  .photo {
-    float: left;
+      img {
+        min-width: 20rem;
+        min-height: 15rem;
+      }
+    }
   }
 }
 
@@ -109,16 +117,31 @@ select {
   position:relative;
   margin: auto;
   width: 50em;
+  text-align: center;
 
   table {
+    display: unset;
+    border-spacing: 0.5rem;
     font-size: 14px;
     color: #ffffff;
+    text-align: center;
+    margin-right: 1rem;
+
+    th {
+      width: 8rem;
+    }
+
+    .tackle {
+      text-align: center;
+    }
+
+    .fishing {
+      text-align: center;
+    }
   }
 
   ul {
-    position: relative;
     padding-left: unset;
-    text-align: center;
   }
 
   li {
@@ -129,6 +152,7 @@ select {
 
   .ourPhoto {
     justify-content: center;
+    display: flex;
 
   }
   img {
@@ -137,13 +161,11 @@ select {
     position: relative;
     height: 10rem;
   }
-  .ourPhoto {
-    display: flex;
-  }
 
   .tackleShare {
     padding-top: 30px;
     display: inline-block;
+    text-align: center;
   }
 
   .goodAction {

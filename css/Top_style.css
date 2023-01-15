@@ -11,103 +11,59 @@ html {
   html {
     font-size: 14px;
   }
-  html .ourTackle {
-    width: 100%;
-  }
-  html .ourTackle .info {
-    width: 100%;
-    margin: auto;
-    padding: 0;
-  }
-  html .ourTackle .photo {
-    width: 100%;
-    margin: auto;
-    padding: 0;
-  }
-  html .ourTackle .photo input {
-    width: 20rem;
-  }
-  html .ourTackle .photo img {
-    width: 20rem;
-    margin: auto;
-  }
-  html .ourTackle .tackleinfo {
-    text-align: center;
-    padding: 0;
-  }
-  html .info {
-    width: 100%;
-    margin: auto;
-    padding: 0;
-  }
-  html .photo {
-    width: 100%;
-    margin: auto;
-    padding: 0;
-  }
-  html .photo input {
-    width: 20rem;
-  }
-  html .photo img {
-    width: 20rem;
-    margin: auto;
-  }
-  html .tackleinfo {
-    text-align: center;
-    padding: 0;
-  }
-  html .fishinfo {
-    text-align: center;
-  }
 }
 @media screen and (max-width: 600px) {
   html {
     font-size: 12px;
   }
+  html #tackleform {
+    width: 100%;
+    text-align: center;
+  }
+  html #tackleform .tackleinfo .info {
+    padding-left: 0;
+  }
+  html #tackleform .tackleinfo .info .photo {
+    text-align: center;
+    padding-right: 0;
+    float: unset;
+  }
+  html #tackleform .tackleinfo .info .photo img {
+    min-width: 20rem;
+    min-height: 15rem;
+    margin: auto;
+  }
+  html #tackleform .tackleinfo .info .photo input {
+    padding: 1rem;
+    margin: auto;
+  }
+  html #tackleform .fishinfo .info {
+    padding: 0;
+    text-align: unset;
+  }
+  html #tackleform .fishinfo .photo {
+    text-align: center;
+    padding: 0;
+    float: unset;
+  }
+  html #tackleform .fishinfo .photo img {
+    min-width: 20rem;
+    min-height: 15rem;
+    margin: auto;
+  }
   html .ourTackle {
     width: 100%;
   }
-  html .ourTackle .info {
-    width: 100%;
-    margin: auto;
-    padding: 0;
+  html .ourTackle .ourPhoto {
+    display: block;
   }
-  html .ourTackle .photo {
-    width: 100%;
-    margin: auto;
-    padding: 0;
+  html .ourTackle table {
+    display: block;
+    text-align: left;
   }
-  html .ourTackle .photo input {
-    width: 20rem;
-  }
-  html .ourTackle .photo img {
-    width: 20rem;
-    margin: auto;
-  }
-  html .ourTackle .tackleinfo {
+  html .ourTackle table th {
     text-align: center;
-    padding: 0;
-  }
-  html .info {
-    width: 100%;
-    margin: auto;
-    padding: 0;
-  }
-  html .photo {
-    width: 100%;
-    margin: auto;
-    padding: 0;
-  }
-  html .photo input {
-    width: 20rem;
-  }
-  html .photo img {
-    width: 20rem;
-    margin: auto;
-  }
-  html .tackleinfo {
-    text-align: center;
-    padding: 0;
+    width: 15rem;
   }
 }
 @media screen and (max-width: 480px) {

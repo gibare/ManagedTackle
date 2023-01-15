@@ -21,7 +21,7 @@ use App\Http\Controllers\GoodController;
 |
 */
 
-Route::get('/home', function () {
+Route::get('/', function () {
     return Inertia::render('Top', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),

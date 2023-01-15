@@ -26,6 +26,12 @@ const form = useForm({
 </script>
 
 <template>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ユーザー情報</title>
+        <meta name="description" content="ユーザーの基本情報を登録します。">
+    </head>
     <img src="./images/Mypage.png" alt="" class="mypage-img" />
     <section>
         <UserLayout>

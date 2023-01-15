@@ -3,7 +3,7 @@
   <header class="bg-gray-100">
     <nav>
         <div id="tackle_home">
-            <inertia-link href="/home">TACKLE BOX</inertia-link>
+            <inertia-link href="/">TACKLE BOX</inertia-link>
         </div>
         <button
             v-show="buttonShow"

@@ -27,9 +27,14 @@ const submit = () => {
 </script>
 
 <template>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ログイン</title>
+        <meta name="description" content="ログインします。">
+    </head>
     <img src="../images/SignUP_Login.png" alt="" class="login-img" />
     <Layout>
-        <Head title="Log in" />
 
         <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
             {{ status }}

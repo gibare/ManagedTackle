@@ -21,14 +21,18 @@ const submit = () => {
 </script>
 
 <template>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>パスワードを忘れた方へ</title>
+        <meta name="description" content="パスワード変更用のリンクを送信します。">
+    </head>
     <img src="../images/changepage.png" alt="" class="change-img" />
-        <Head title="Forgot Password" />
 
         <section id="sendform">
             <div class="form_background">
         <div class="mb-4 text-sm text-gray-600">
             以下のボタンから、パスワード再設定用リンクを登録メールアドレスに送信します。<br>
-            ボックス内に登録メールアドレスを入力のうえ、ボタンをクリックしてください。<br>
             送信されたパスワード再設定用リンクからパスワードの再設定をお願いいたします。
         </div>
 

@@ -1,4 +1,10 @@
 <template>
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>アプリ紹介</title>
+        <meta name="description" content="TackleBoxの目的についてご紹介します。">
+    </head>
     <img src="./images/App_introduction.png" alt="" class="introduction-img" />
   <Layout title="アプリ紹介">
 

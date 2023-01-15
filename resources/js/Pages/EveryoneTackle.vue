@@ -14,9 +14,17 @@ const searchWord = ref(['']);
 
 const goodUser = props.user;
 
+console.log(props);
+
 </script>
 
 <template>
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>みんなのタックル</title>
+        <meta name="description" content="アングラ―の皆さんのタックル・釣果をシェアしています。">
+    </head>
   <img src="./images/tackle_share.png" alt="" class="share-img">
 
   <UserLayout>
@@ -47,40 +55,46 @@ const goodUser = props.user;
                 <img :src="tackle.tackle_photo" alt="" @click="countUp">
               </div>
               <div v-else class="sharePhoto">
-                <img src="@/Pages/images/20200504_noimage.png" alt="">
+                <img src="@/Pages/images/NoImage.png" alt="">
               </div>
               <div v-if="tackle.fishingresult_photo">
                 <img :src="tackle.fishingresult_photo" alt="">
               </div>
               <div v-else class="sharePhoto">
-                <img src="@/Pages/images/20200504_noimage.png" alt="">
+                <img src="@/Pages/images/NoImage.png" alt="">
               </div>
             </div>
-                  <table>
+                  <table class="tackle">
                     <tr>
                       <th>タックル名</th>
                       <th>{{ tackle.tackle_name }}</th>
-                      <th>魚種</th>
-                      <th>{{ tackle.fish_category }}</th>
                     </tr>
                     <tr>
                       <th>メーカー名</th>
                       <th>{{ tackle.maker_name }}</th>
-                      <th>サイズ</th>
-                      <th>{{ tackle.size }}</th>
                     </tr>
                     <tr>
                       <th>購入金額</th>
                       <th>{{ tackle.purchase_fee }}円</th>
-                      <th>コンディション</th>
-                  <th>{{ tackle.condition }}</th>
                     </tr>
                     <tr>
                       <th>詳細情報</th>
                       <th>{{ tackle.detailed_info }}</th>
                     </tr>
+                  </table>
+
+                  <table class="fishing">
                     <tr>
-                      
+                      <th>魚種</th>
+                      <th>{{ tackle.fish_category }}</th>
+                    </tr>
+                    <tr>
+                      <th>サイズ</th>
+                      <th>{{ tackle.size }}cm</th>
+                    </tr>
+                    <tr>
+                      <th>コンディション</th>
+                      <th>{{ tackle.condition }}</th>
                     </tr>
                   </table>
               </div>

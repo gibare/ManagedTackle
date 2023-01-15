@@ -21,31 +21,30 @@ h1 {
   display: flex;
   flex-flow: column;
 }
-
-.info {
-  width: 100%;
-  margin: auto;
+#tackleform .tackleinfo .info {
+  padding-left: 2rem;
 }
-
-.photo {
-  margin: auto;
+#tackleform .tackleinfo .photo {
+  float: right;
+  padding-right: 2rem;
+  text-align: center;
 }
-.photo img {
-  min-width: 20vw;
-  max-height: 20rem;
-  margin: auto;
-  background-color: #ffffff;
+#tackleform .tackleinfo .photo img {
+  min-width: 20rem;
+  min-height: 15rem;
 }
-.photo input {
-  width: 20rem;
-}
-
-.tackleinfo {
+#tackleform .fishinfo .info {
   text-align: right;
-  padding: 2rem;
+  padding-right: 3rem;
 }
-.tackleinfo .photo {
+#tackleform .fishinfo .photo {
   float: left;
+  padding-left: 2rem;
+  text-align: center;
+}
+#tackleform .fishinfo .photo img {
+  min-width: 20rem;
+  min-height: 15rem;
 }
 
 .updateButton {
@@ -102,15 +101,27 @@ select {
   position: relative;
   margin: auto;
   width: 50em;
+  text-align: center;
 }
 .ourTackle table {
+  display: unset;
+  border-spacing: 0.5rem;
   font-size: 14px;
   color: #ffffff;
+  text-align: center;
+  margin-right: 1rem;
+}
+.ourTackle table th {
+  width: 8rem;
+}
+.ourTackle table .tackle {
+  text-align: center;
+}
+.ourTackle table .fishing {
+  text-align: center;
 }
 .ourTackle ul {
-  position: relative;
   padding-left: unset;
-  text-align: center;
 }
 .ourTackle li {
   border-radius: 15px;
@@ -118,6 +129,7 @@ select {
 }
 .ourTackle .ourPhoto {
   justify-content: center;
+  display: flex;
 }
 .ourTackle img {
   padding: 0 0.5rem;
@@ -125,12 +137,10 @@ select {
   position: relative;
   height: 10rem;
 }
-.ourTackle .ourPhoto {
-  display: flex;
-}
 .ourTackle .tackleShare {
   padding-top: 30px;
   display: inline-block;
+  text-align: center;
 }
 .ourTackle .goodAction {
   width: 100%;
