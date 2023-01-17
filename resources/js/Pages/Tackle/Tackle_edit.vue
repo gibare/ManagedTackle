@@ -36,12 +36,29 @@ const form = useForm({
     fishingPhoto: null,
     share_stock: tackle.share_stock,
 });
+
+const previewtackle = ref('');
+const tackleFile = (event) => {
+    const file = event.target.files[0];
+    previewtackle.value = URL.createObjectURL(file)
+}
+
+const previewFishing = ref('');
+const fishingFile = (event) => {
+    const file = event.target.files[0];
+    previewFishing.value = URL.createObjectURL(file)
+}
+
+const csrf = () =>
+{ document.querySelector('meta[name="csrf-token"]').getAttribute('content')}
+
 </script>
 
 <template>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>タックル編集</title>
         <meta name="description" content="タックルと釣果を編集します。">
     </head>
@@ -51,12 +68,16 @@ const form = useForm({
         <h1>タックル情報</h1>
 
         <form @submit.prevent="form.post(route('tackle.update', tackle.id))" class="mt-6 space-y-6">       <!-- idパラメータ -->
+            <input type="hidden" name="_token" :value="csrf">
           <div id="tackleform">
             <div class="tackleinfo">
             <div class="info">
                 <div class="photo">
                     <span v-if="form.tackle_photo">
                         <img :src="form.tackle_photo">
+                    </span>
+                    <span v-else-if="previewtackle">
+                        <img :src="previewtackle" alt="">
                     </span>
                     <span v-else>
                         <img src="../images/NoImage.png">
@@ -65,6 +86,7 @@ const form = useForm({
                         id="tacklePhoto"
                         @input="form.tacklePhoto = $event.target.files[0]"
                         type="file"
+                        @change="tackleFile"
                     />
 
                     <div v-if="form.errors.tacklePhoto">
@@ -201,6 +223,9 @@ const form = useForm({
                 <span v-if="form.fishingResult_photo">
                     <img :src="form.fishingResult_photo">
                 </span>
+                <span v-else-if="previewFishing">
+                    <img :src="previewFishing" alt="">
+                </span>
                 <span v-else>
                         <img src="../images/NoImage.png">
                 </span>
@@ -208,6 +233,7 @@ const form = useForm({
                     id="fishingPhoto"
                     @input="form.fishingPhoto = $event.target.files[0]"
                     type="file"
+                    @change="fishingFile"
                 />
 
                 <div v-if="form.errors.fishingPhoto">
@@ -313,13 +339,15 @@ const form = useForm({
                 >更新
                 </PrimaryButton>
 
-                <PrimaryButton
+                <Link
+                as="button"
+                type="button"
                 method="delete"
-                :href="route('tackle.delete',tackle.id)" preserve-scroll 
+                :href="route('tackle.destroy',tackle.id)" preserve-scroll 
                 class="border border-red-400 m-1 p-1 text-sm text-red-400"
                 style="background-color:#fd0606; ">
                 タックル削除
-                </PrimaryButton>
+            </Link>
             </div>
 
 

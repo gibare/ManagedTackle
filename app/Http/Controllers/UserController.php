@@ -40,7 +40,7 @@ class UserController extends Controller
     {
         $user = Auth::user();
 
-        return Inertia::render('user.edit', compact('user'));
+        return Inertia::render('Mypage', compact('user'));
     }
 
     /**

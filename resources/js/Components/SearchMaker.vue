@@ -1,5 +1,6 @@
 <template>
-<select v-model="selectedMaker">
+<select v-model="selected">
+  <option disabled value="">メーカー名で検索</option>
   <option v-for="maker in makers"
     :value="maker.name"
     :key="maker.name"
@@ -29,6 +30,7 @@ export default {
   },
   data() {
     return {
+      selected: '',
       makers: [ 
           { id: 1, name: 'SHIMANO（シマノ）' }, 
           { id: 2, name: 'DAIWA（ダイワ）' }, 

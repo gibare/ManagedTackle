@@ -33,7 +33,7 @@ class Tackle extends Model
 
 
     //1つのタックルは1人のユーザーに属する
-    public function users() {
+    public function user() {
         return $this->belongsTo(User::class);
     }
 

@@ -32,12 +32,17 @@ const updatePassword = () => {
         },
     });
 };
+
+const csrf = () =>
+{ document.querySelector('meta[name="csrf-token"]').getAttribute('content')}
+
 </script>
 
 <template>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>パスワード変更</title>
         <meta name="description" content="パスワードを変更します。">
     </head>
@@ -53,6 +58,7 @@ const updatePassword = () => {
         </header>
 
         <form @submit.prevent="updatePassword" class="mt-6 space-y-6">
+            <input type="hidden" name="_token" :value="csrf">
             <div>
                 <InputLabel for="current_password" value="現在のパスワード" />
 

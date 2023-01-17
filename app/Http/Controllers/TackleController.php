@@ -159,9 +159,9 @@ class TackleController extends Controller
     public function destroy(Request $request,Tackle $tackle, $id)
     {
         //
-        $tackle = Tackle::find($id);
+        $tackles = Tackle::find($id);
 
-        $tackle->delete();
+        $tackles->delete();
         return redirect()->route('tackle.index');
     }
 }

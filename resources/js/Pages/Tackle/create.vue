@@ -44,12 +44,17 @@ const fishingFile = (event) => {
     const file = event.target.files[0];
     previewFishing.value = URL.createObjectURL(file)
 }
+
+const csrf = () =>
+{ document.querySelector('meta[name="csrf-token"]').getAttribute('content')}
+
 </script>
 
 <template>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>タックル追加</title>
         <meta name="description" content="タックル・釣果を追加します。">
     </head>
@@ -59,6 +64,7 @@ const fishingFile = (event) => {
         <h1>タックル情報</h1>
 
         <form @submit.prevent="submit" class="mt-6 space-y-6">
+            <input type="hidden" name="_token" :value="csrf">
           <div id="tackleform">
             <div class="tackleinfo">
                 <div class="info">

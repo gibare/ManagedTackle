@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Pagination\Paginator;
 
 class ShareController extends Controller
 {
@@ -19,12 +20,13 @@ class ShareController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Good $good, Request $request, Tackle $tackle)
+    public function index(Good $good, Request $request, Tackle $tackle,User $user)
     {
         //
         //$goods = Good::where('tackle_id', $tackle->id)->where('user_id', auth()->user()->id)->get();
 
-        $tackles = Tackle::where('share_stock', '1')->withCount(['goods'])->orderBy('updated_at', 'desc')->get()->toArray();
+        $tackles = Tackle::where('share_stock', '1')->with(['user'])
+        ->withCount(['goods'])->orderBy('updated_at', 'desc')->get()->toArray();
 
         return Inertia::render('EveryoneTackle', compact('tackles'));
     }
@@ -33,7 +35,7 @@ class ShareController extends Controller
     {
 
             $tackles = Tackle::where('share_stock', '1')
-            ->withCount(['goods'])->where('maker_name', 'like', '%'.$queryWord.'%'
+            ->with(['user'])->withCount(['goods'])->where('maker_name', 'like', '%'.$queryWord.'%'
             )->get();
 
             return Inertia::render('EveryoneTackle',compact('tackles'));

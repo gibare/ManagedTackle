@@ -21,12 +21,17 @@ const submit = () => {
         onFinish: () => form.reset('password', 'password_confirmation'),
     });
 };
+
+const csrf = () =>
+{ document.querySelector('meta[name="csrf-token"]').getAttribute('content')}
+
 </script>
 
 <template>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>新規登録</title>
         <meta name="description" content="新規ユーザーを登録します。">
     </head>
@@ -34,6 +39,7 @@ const submit = () => {
     <section>
     <Layout>
         <form @submit.prevent="submit">
+            <input type="hidden" name="_token" :value="csrf">
             <div id="userform">
             <div>
                 <InputLabel for="name" value="名前" />
@@ -125,7 +131,8 @@ const submit = () => {
             </div>
             <div class="items-center justify-end mt-4">
                 <a :href="route('auth.google')">
-                    <img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png">
+                    <img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png"
+                    style="width:100%;">
                 </a>
             </div>
             </div>

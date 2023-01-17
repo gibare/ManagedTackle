@@ -1,13 +1,11 @@
 <script setup>
 import UserLayout from '../Components/UserLayout.vue';
 import { Link, useForm, usePage } from '@inertiajs/inertia-vue3'
-
-import SelectMaker from '@/Components/SelectMaker.vue';
+import SearchMaker from '@/Components/SearchMaker.vue';
 import { ref } from 'vue';
 
 const props = defineProps({
   tackles: Array,
-  user: String,
 })
 
 const searchWord = ref(['']);
@@ -30,7 +28,7 @@ console.log(props);
   <UserLayout>
     <h1>みんなのタックル</h1>
     <div class="search">
-    <SelectMaker
+    <SearchMaker
     name="search"
     v-model="searchWord"
     />
@@ -49,6 +47,7 @@ console.log(props);
             :key="tackle.id"
             >
             <div id="share_info">
+              <h2>{{ tackle.user.name }}さんのタックル</h2>
             <div class="tackleShare">
               <div class="ourPhoto">
               <div v-if="tackle.tackle_photo">

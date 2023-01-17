@@ -1,34 +1,15 @@
-@charset "UTF-8";
 .explanation {
-  position: relative;
   color: #ffffff;
   font-family: IBM Plex Mono;
   font-weight: 500;
   text-align: center;
-  /* 表示時の状態 */
-  /* 表示時のアクティブ状態 */
-  /* 表示時の終了状態 */
-  /* 非表示時の状態 */
-  /* 非表示時のアクティブ状態 */
-  /* 非表示時の終了状態 */
-}
-.explanation .fade-enter-from {
-  opacity: 0;
-}
-.explanation .fade-enter-active {
-  transition: all 0.5s;
-}
-.explanation .fade-enter-to {
-  opacity: 1;
-}
-.explanation .fade-leave-from {
-  opacity: 1;
-}
-.explanation .fade-leave-active {
-  transition: all 0.5s;
-}
-.explanation .fade-leave-to {
-  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: #ffffff;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
 }
 .explanation h1 {
   font-size: 2.5rem;

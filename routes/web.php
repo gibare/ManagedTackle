@@ -39,10 +39,6 @@ Route::get('/introduction', function () {
     ]);
 });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -59,20 +55,14 @@ Route::get("auth/google", [
     "handleGoogleCallback",
   ]);
 
-  Route::get('/user', function () {
-    return Inertia::render('Mypage', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-})->name('user.edit');
+Route::middleware('auth')->group(function () {
+    Route::get('/user', [UserController::class, 'edit'])->name('user.edit');
+    Route::patch('/user', [UserController::class, 'update'])->name('user.update');
+    Route::delete('/user', [UserController::class, 'destroy'])->name('user.destroy');
+});
 
-Route::patch('/user', [UserController::class, 'update'])->name('user.update');
-
-Route::delete('/user', [UserController::class, 'destroy'])->name('user.destroy');
-
-Route::get('/passwordchange', function(){
+Route::middleware('auth')->group(function () {
+    Route::get('/passwordchange', function(){
     return Inertia::render('PasswordChange',[
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
@@ -80,10 +70,8 @@ Route::get('/passwordchange', function(){
         'phpVersion' => PHP_VERSION,
     ]);
 })->name('user.PasswordChange');
-
-Route::post('/passwordchange', [UserController::class, 'PasswordEdit'])
-                ->name('user.PasswordEdit');
-                
+    Route::post('/passwordchange', [UserController::class, 'PasswordEdit'])->name('user.PasswordEdit');
+});
 Route::get('/deleteuser', function () {
     return Inertia::render('DeleteUser', [
         'canLogin' => Route::has('login'),
@@ -91,7 +79,7 @@ Route::get('/deleteuser', function () {
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
-})->name('user.deleteuser');
+})->middleware(['auth'])->name('user.deleteuser');
 
 Route::get('/mytackle', [TackleController::class, 'index'])
 ->middleware(['auth'])->name('tackle.index');
@@ -110,8 +98,8 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('/tackle_edit/{id}', [TackleController::class, 'update'])
                 ->name('tackle.update');
 
-    Route::delete('/tackle_edit/{id}/',[TackleController::class, 'destroy'])
-                ->name('tackle.delete');
+    Route::delete('/tackle_edit/{id}',[TackleController::class, 'destroy'])
+                ->name('tackle.destroy');
 });
 
 Route::group(['middleware' => 'auth'], function() {
@@ -124,11 +112,6 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('/share_tackle',[GoodController::class, 'goodAdd'])
     ->name('good.goodAdd');
 });
-
-Route::get('/test',function () {
-    return Inertia::render('test');
-}
-);
 
 
 require __DIR__.'/auth.php';

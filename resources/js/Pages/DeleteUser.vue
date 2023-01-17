@@ -41,16 +41,16 @@ const closeModal = () => {
 
 <template>
     <img src="./images/changepage.png" alt="" class="change-img" />
-    <section id="delete_form">
-        <header>
+    <section id="section_form">
+        <div class="delete_form">
             <h2 class="text-lg font-medium text-gray-900">アカウント削除</h2>
 
             <p class="mt-1 text-sm text-gray-600">
                 アカウントを削除すると、全てのデータが完全に削除されます。
             </p>
-        </header>
+            <DangerButton @click="confirmUserDeletion" style="width:13rem; margin:0 auto; background: #fd4a4a">アカウントを削除する</DangerButton>
 
-        <DangerButton @click="confirmUserDeletion" style="width:13rem; margin:0 auto; background: #fd4a4a">アカウントを削除する</DangerButton>
+        </div>
 
         <Modal :show="confirmingUserDeletion" @close="closeModal">
             <div class="p-6">

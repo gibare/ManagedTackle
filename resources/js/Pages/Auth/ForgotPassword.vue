@@ -18,12 +18,17 @@ const form = useForm({
 const submit = () => {
     form.post(route('password.email'));
 };
+
+const csrf = () =>
+{ document.querySelector('meta[name="csrf-token"]').getAttribute('content')}
+
 </script>
 
 <template>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>パスワードを忘れた方へ</title>
         <meta name="description" content="パスワード変更用のリンクを送信します。">
     </head>
@@ -32,8 +37,8 @@ const submit = () => {
         <section id="sendform">
             <div class="form_background">
         <div class="mb-4 text-sm text-gray-600">
-            以下のボタンから、パスワード再設定用リンクを登録メールアドレスに送信します。<br>
-            送信されたパスワード再設定用リンクからパスワードの再設定をお願いいたします。
+            以下のボタンから、パスワード再設定用リンクをメールアドレスに送信します。<br>
+            パスワード再設定用リンクからパスワードの再設定をお願いいたします。
         </div>
 
         <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
@@ -41,6 +46,7 @@ const submit = () => {
         </div>
 
         <form @submit.prevent="submit">
+            <input type="hidden" name="_token" :value="csrf">
             <div>
                 <InputLabel for="email" value="メールアドレス" />
 

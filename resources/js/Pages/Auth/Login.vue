@@ -24,12 +24,17 @@ const submit = () => {
         onFinish: () => form.reset('password'),
     });
 };
+
+const csrf = () =>
+{ document.querySelector('meta[name="csrf-token"]').getAttribute('content')}
+
 </script>
 
 <template>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>ログイン</title>
         <meta name="description" content="ログインします。">
     </head>
@@ -41,6 +46,7 @@ const submit = () => {
         </div>
 
         <form @submit.prevent="submit">
+            <input type="hidden" name="_token" :value="csrf">
             <div id="userform">
             <div>
                 <InputLabel for="email" value="メールアドレス" />

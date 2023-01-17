@@ -81,6 +81,7 @@ select {
 }
 
 .search {
+  padding-left: 1rem;
   width: 100%;
   display: inline-flex;
 }
@@ -102,6 +103,11 @@ select {
   margin: auto;
   width: 50em;
   text-align: center;
+}
+.ourTackle h2 {
+  color: #ffffff;
+  padding-top: 0.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .ourTackle table {
   display: unset;

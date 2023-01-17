@@ -23,12 +23,17 @@ const form = useForm({
     angler_years: user.angler_years,
     favorite_maker_name: user.favorite_maker_name,
 });
+
+const csrf = () =>
+{ document.querySelector('meta[name="csrf-token"]').getAttribute('content')}
+
 </script>
 
 <template>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>ユーザー情報</title>
         <meta name="description" content="ユーザーの基本情報を登録します。">
     </head>
@@ -37,6 +42,7 @@ const form = useForm({
         <UserLayout>
 
         <form @submit.prevent="form.patch(route('user.update'))" class="mt-6 space-y-6">
+            <input type="hidden" name="_token" :value="csrf">
             <div id="userform">
             <div>
                 <InputLabel for="name" value="名前" />
