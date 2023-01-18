@@ -60,10 +60,23 @@ h1 {
 ul {
   position: relative;
   z-index: 30;
-  color: #06fd8a;
+}
+ul .nav__link_button {
+  background-color: rgb(78, 185, 244);
+}
+ul .our_nav__link {
+  color: #fff;
+  background: red;
+  padding: 0.75rem 2rem;
+  display: inline-block;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: bold;
 }
 ul li {
   list-style: none;
+  height: 100%;
+  margin: auto;
 }
 ul a {
   color: #06fd8a;

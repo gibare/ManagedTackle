@@ -159,7 +159,7 @@ const csrf = () =>
                 <InputError class="mt-2" :message="form.errors.name" />
                 </div>
                 <div>
-                <InputLabel for="purchase_fee" value="購入金額" />
+                <InputLabel for="purchase_fee" value="購入金額（円）" />
 
                 <TextInput
                     id="purchase_fee"
@@ -234,7 +234,7 @@ const csrf = () =>
                 </div>
                 <div>
 
-                    <InputLabel for="size" value="サイズ" />
+                    <InputLabel for="size" value="サイズ（cm）" />
                 <TextInput
                         id="size"
                         type="integer"
@@ -250,7 +250,7 @@ const csrf = () =>
                 </div>
                 <div>
 
-                    <InputLabel for="weight" value="重さ" />
+                    <InputLabel for="weight" value="重さ（g）" />
                 <TextInput
                         id="weight"
                         type="integer"

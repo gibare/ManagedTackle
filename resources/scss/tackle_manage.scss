@@ -71,10 +71,26 @@ h1 {
 ul {
   position: relative;
   z-index:30;
-  color:#06fd8a;
+
+  .nav__link_button {
+    background-color: rgb(78, 185, 244);
+  }
+
+  .our_nav__link {
+    color: #fff;
+    background: red;
+    padding: 0.75rem 2rem;
+    display: inline-block;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
 
   li {
     list-style: none;
+    height: 100%;
+    margin: auto;
   }
   
   a {

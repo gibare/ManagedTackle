@@ -53,7 +53,8 @@ const closeModal = () => {
         </div>
 
         <Modal :show="confirmingUserDeletion" @close="closeModal">
-            <div class="p-6">
+            <div class="delete_confirm">
+                <div class="confirm">
                 <h2 class="text-lg font-medium text-gray-900">
                     アカウントを削除してよろしいですか？
                 </h2>
@@ -63,7 +64,7 @@ const closeModal = () => {
                 </p>
 
                 <div class="mt-6">
-                    <InputLabel for="password" value="Password" class="sr-only" />
+                    <InputLabel for="password" value="パスワード" class="sr-only" />
 
                     <TextInput
                         id="password"
@@ -89,6 +90,7 @@ const closeModal = () => {
                     >
                         アカウントを削除する
                     </DangerButton>
+                </div>
                 </div>
             </div>
         </Modal>

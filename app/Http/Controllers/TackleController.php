@@ -147,7 +147,7 @@ class TackleController extends Controller
 
         $tackles->save();
 
-        return redirect()->route('tackle.edit',[$id]);
+        return redirect()->route('tackle.index');
     }
 
     /**

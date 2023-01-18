@@ -20,13 +20,13 @@
         <nav v-show="menuOpen" class="nav" :class="{ 'sp-menu': buttonShow }">
             <ul class="nav__list">
             <li class="nav__item">
-                <a href="/introduction" class="nav__link">アプリ紹介</a>
+                <a href="/introduction" class="nav__link" style="color:#06fd8a;">アプリ紹介</a>
             </li>
             <li class="nav__item">
-                <a href="/register" class="nav__link">新規登録</a>
+                <button onclick="location.href='/register'" class="nav__link_button">新規登録</button>
             </li>
-            <li class="nav__item" type="button">
-                <a href="/login" class="nav__link">ログイン</a>
+            <li class="nav__item">
+                <button onclick="location.href='/login'" type="button" class="nav__link">ログイン</button>
             </li>
             </ul>
         </nav>

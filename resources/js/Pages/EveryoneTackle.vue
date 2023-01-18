@@ -12,8 +12,6 @@ const searchWord = ref(['']);
 
 const goodUser = props.user;
 
-console.log(props);
-
 </script>
 
 <template>

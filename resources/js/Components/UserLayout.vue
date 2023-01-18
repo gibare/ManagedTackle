@@ -20,16 +20,16 @@
         <nav v-show="menuOpen" class="nav" :class="{ 'sp-menu': buttonShow }">
             <ul class="nav__list">
             <li class="nav__item">
-                <a href="/user" class="nav__link">ユーザー情報</a>
+                <a href="/user" class="nav__link" style="color:#06fd8a;">ユーザー情報</a>
             </li>
             <li class="nav__item">
-                <a href="/mytackle" class="nav__link">マイタックル</a>
+                <a href="/mytackle" class="nav__link" style="color:#06fd8a;">マイタックル</a>
             </li>
             <li class="nav__item">
-                <a href="/share_tackle" class="nav__link">みんなのタックル</a>
+                <a href="/share_tackle" class="nav__link" style="color:#06fd8a;">みんなのタックル</a>
             </li>
             <li class="nav__item">
-                <a :href="route('logout')" class="nav__link">ログアウト</a>
+                <a :href="route('logout')" as="button" type="button" class="our_nav__link" >ログアウト</a>
             </li>
             </ul>
         </nav>

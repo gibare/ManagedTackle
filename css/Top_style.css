@@ -11,6 +11,25 @@ html {
   html {
     font-size: 14px;
   }
+  html nav {
+    color: #06fd8a;
+  }
+  html nav ul .nav__link_button {
+    background-color: transparent;
+    box-shadow: none;
+    font-size: 1.2em;
+    color: #06fd8a;
+  }
+  html nav ul .our_nav__link {
+    background-color: transparent;
+    box-shadow: none;
+    font-size: 1.2em;
+    color: #06fd8a;
+  }
+  html nav ul li button {
+    background-color: transparent;
+    box-shadow: none;
+  }
   html #tackleform {
     width: 100%;
     text-align: center;
@@ -297,6 +316,28 @@ select {
   height: 100%;
   justify-content: center;
   flex-flow: column;
+}
+
+.delete_confirm {
+  position: absolute;
+  color: #ffffff;
+  display: flex;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  flex-flow: column;
+  z-index: 99;
+}
+.delete_confirm .confirm {
+  padding: 2rem;
+  background-color: #89898a;
+  color: #ffffff;
+  margin: auto;
+  border-radius: 15px;
+}
+.delete_confirm span {
+  padding: 2rem;
 }
 
 body {
