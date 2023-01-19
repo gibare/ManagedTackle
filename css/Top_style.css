@@ -14,6 +14,9 @@ html {
   html nav {
     color: #06fd8a;
   }
+  html nav ul button {
+    margin: 0;
+  }
   html nav ul .nav__link_button {
     background-color: transparent;
     box-shadow: none;
@@ -25,6 +28,7 @@ html {
     box-shadow: none;
     font-size: 1.2em;
     color: #06fd8a;
+    padding: 0;
   }
   html nav ul li button {
     background-color: transparent;
@@ -178,7 +182,7 @@ form #userform {
 form label {
   display: inline-block;
   text-align: right;
-  width: 10rem;
+  width: 12rem;
   padding-right: 3.5rem;
   gap: 1rem;
 }

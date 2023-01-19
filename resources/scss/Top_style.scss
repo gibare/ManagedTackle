@@ -25,6 +25,10 @@ $breakpoints: (
 
             ul {
 
+              button {
+                margin: 0;
+              }
+
               .nav__link_button {
                 background-color: transparent;
                 box-shadow: none;
@@ -37,6 +41,7 @@ $breakpoints: (
                 box-shadow: none;
                 font-size: 1.2em;
                 color: #06fd8a;
+                padding: 0;
               }
 
                li {
@@ -215,7 +220,7 @@ form {
   label {
     display: inline-block;
     text-align: right;
-    width: 10rem;
+    width: 12rem;
     padding-right: 3.5rem;
     gap: 1rem;
 

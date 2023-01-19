@@ -95,6 +95,7 @@ const csrf = () =>
                     autofocus
                     autocomplete="tackle_name"
                 />
+                <a href=""></a>
 
                 <InputError class="mt-2" :message="form.errors.name" />
                 </div>
@@ -159,7 +160,7 @@ const csrf = () =>
                 <InputError class="mt-2" :message="form.errors.name" />
                 </div>
                 <div>
-                <InputLabel for="purchase_fee" value="購入金額（円）" />
+                <InputLabel for="purchase_fee" value="購入金額(円)" />
 
                 <TextInput
                     id="purchase_fee"
@@ -169,9 +170,7 @@ const csrf = () =>
                     autofocus
                     required
                     autocomplete="purchase_fee"
-                    style="width:12rem;"
                 />
-                <span style="padding-left: 0.1rem;">円</span>
 
                 <InputError class="mt-2" :message="form.errors.name" />
                 </div>
@@ -234,7 +233,7 @@ const csrf = () =>
                 </div>
                 <div>
 
-                    <InputLabel for="size" value="サイズ（cm）" />
+                    <InputLabel for="size" value="サイズ(cm)" />
                 <TextInput
                         id="size"
                         type="integer"
@@ -242,15 +241,13 @@ const csrf = () =>
                         v-model="form.size"
                         autofocus
                         autocomplete="size"
-                        style="width:12rem;"
                     />
-                    <span style="padding-left: 0.05rem;">cm</span>
 
                     <InputError class="mt-2" :message="form.errors.name" />
                 </div>
                 <div>
 
-                    <InputLabel for="weight" value="重さ（g）" />
+                    <InputLabel for="weight" value="重さ(g)" />
                 <TextInput
                         id="weight"
                         type="integer"
@@ -258,9 +255,7 @@ const csrf = () =>
                         v-model="form.weight"
                         autofocus
                         autocomplete="weight"
-                        style="width:12rem;"
                     />
-                    <span style="padding-left: 0.1rem;">g</span>
 
                     <InputError class="mt-2" :message="form.errors.name" />
                 </div>
