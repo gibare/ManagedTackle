@@ -5,7 +5,7 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { useForm } from '@inertiajs/inertia-vue3';
 import { ref } from 'vue';
-import img from '@/images/changepage.png'
+import img from '@/Pages/images/changepage.png'
 
 const passwordInput = ref(null);
 const currentPasswordInput = ref(null);
@@ -46,7 +46,7 @@ const csrf = () =>
         <title>パスワード変更</title>
         <meta name="description" content="パスワードを変更します。">
     </head>
-    <img src="./images/changepage.png" alt="" class="change-img" />
+    <img src="@/Pages/images/changepage.png" alt="" class="change-img" />
     <section id="section_form">
         <div class="change_form">
         <header>

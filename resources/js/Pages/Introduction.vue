@@ -5,7 +5,7 @@
         <title>アプリ紹介</title>
         <meta name="description" content="TackleBoxの目的についてご紹介します。">
     </head>
-    <img src="./images/App_introduction.png" alt="" class="introduction-img" />
+    <img src="@/Pages/images/App_Introduction.png" alt="" class="introduction-img" />
   <Layout title="アプリ紹介">
     <div class="explanation">
       <h1>アプリ紹介</h1>
@@ -28,7 +28,7 @@
 <script>
     import { InertiaLink } from '@inertiajs/inertia-vue3'
     import Layout from '@/Components/Layout.vue';
-    import img from '@/images/App_introduction.png'
+    import img from '@/Pages/images/App_Introduction.png'
 
     export default {
         components: {

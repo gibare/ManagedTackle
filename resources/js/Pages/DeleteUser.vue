@@ -7,7 +7,7 @@ import SecondaryButton from '@/Components/SecondaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { useForm, usePage } from '@inertiajs/inertia-vue3';
 import { nextTick, ref } from 'vue';
-import img from '@/images/changepage.png'
+import img from '@/Pages/images/changepage.png'
 
 
 const confirmingUserDeletion = ref(false);
@@ -40,7 +40,7 @@ const closeModal = () => {
 </script>
 
 <template>
-    <img src="./images/changepage.png" alt="" class="change-img" />
+    <img src="@/Pages/images/changepage.png" alt="" class="change-img" />
     <section id="section_form">
         <div class="delete_form">
             <h2 class="text-lg font-medium text-gray-900">アカウント削除</h2>

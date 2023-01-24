@@ -7,7 +7,7 @@ import SelectMaker from '@/Components/SelectMaker.vue';
 import { Link, useForm, usePage } from '@inertiajs/inertia-vue3';
 import { ref } from 'vue';
 import UserLayout from '../Components/UserLayout.vue';
-import img from '@/images/Mypage.png'
+import img from '@/Pages/images/Mypage.png'
 
 
 const props = defineProps({
@@ -37,7 +37,7 @@ const csrf = () =>
         <title>ユーザー情報</title>
         <meta name="description" content="ユーザーの基本情報を登録します。">
     </head>
-    <img src="./images/Mypage.png" alt="" class="mypage-img" />
+    <img src="@/Pages/images/Mypage.png" alt="" class="mypage-img" />
     <section>
         <UserLayout>
 

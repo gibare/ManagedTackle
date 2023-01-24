@@ -3,7 +3,7 @@ import { InertiaLink } from '@inertiajs/inertia-vue3'
 import UserLayout from '@/Components/UserLayout.vue'
 import { ref } from 'vue';
 import { Link, useForm, usePage } from '@inertiajs/inertia-vue3'
-import img from '@/images/tackle.png'
+import img from '@/Pages/images/tackle.png'
 
 const props = defineProps({
   tackles: Array,
@@ -18,7 +18,7 @@ const props = defineProps({
         <title>マイタックル</title>
         <meta name="description" content="タックルを新規登録・編集します。">
     </head>
-  <img src="../images/tackle.png" alt="" class="tackle-img" />
+  <img src="@/Pages/images/tackle.png" alt="" class="tackle-img" />
   <section>
     <UserLayout>
         <h1>マイタックル</h1>

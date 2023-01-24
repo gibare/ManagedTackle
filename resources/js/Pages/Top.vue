@@ -5,7 +5,7 @@
         <title>ホーム</title>
         <meta name="description" content="TackleBoxは、釣りを愛するアングラ―の皆さんのタックル整理ツールです。">
     </head>
-    <img src="./images/top.png" alt="" class="top-img" />
+    <img src="@/Pages/images/Top.png" alt="" class="top-img" />
   <layout title="TACKLE BOX">
 
   </layout>
@@ -14,7 +14,7 @@
 <script>
     import { InertiaLink } from '@inertiajs/inertia-vue3';
     import Layout from '@/Components/Layout.vue';
-    import img from '@/images/top.png';
+    import img from '@/Pages/images/Top.png';
 
     export default {
         components: {
