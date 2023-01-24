@@ -6,7 +6,7 @@ import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { Head, Link, useForm } from '@inertiajs/inertia-vue3';
-import img from '@/images/SignUP_Login.png';
+import img from '@/Pages/images/SignUP_Login.png';
 
 defineProps({
     canResetPassword: Boolean,
@@ -38,7 +38,7 @@ const csrf = () =>
         <title>ログイン</title>
         <meta name="description" content="ログインします。">
     </head>
-    <img src="../images/SignUP_Login.png" alt="" class="login-img" />
+    <img src="@/Pages/images/SignUP_Login.png" alt="" class="login-img" />
     <Layout>
 
         <div v-if="status" class="mb-4 font-medium text-sm text-green-600">

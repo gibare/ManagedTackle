@@ -3,7 +3,7 @@ import { computed } from 'vue';
 import GuestLayout from '@/Layouts/GuestLayout.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import { Head, Link, useForm } from '@inertiajs/inertia-vue3';
-import img from '@/images/changepage.png'
+import img from '@/Pages/images/changepage.png'
 
 
 const props = defineProps({
@@ -20,7 +20,7 @@ const verificationLinkSent = computed(() => props.status === 'verification-link-
 </script>
 
 <template>
-    <img src="../images/changepage.png" alt="" class="change-img" />
+    <img src="@/Pages/images/changepage.png" alt="" class="change-img" />
     <GuestLayout>
         <Head title="Email Verification" />
 

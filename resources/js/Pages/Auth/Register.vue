@@ -5,7 +5,7 @@ import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { Head, Link, useForm } from '@inertiajs/inertia-vue3';
-import img from '@/images/SignUp_Login.png'
+import img from '@/Pages/images/SignUP_Login.png'
 
 const form = useForm({
     name: '',
@@ -35,7 +35,7 @@ const csrf = () =>
         <title>新規登録</title>
         <meta name="description" content="新規ユーザーを登録します。">
     </head>
-    <img src="../images/SignUp_Login.png" alt="" class="signup-img" />
+    <img src="@/Pages/images/SignUP_Login.png" alt="" class="signup-img" />
     <section>
     <Layout>
         <form @submit.prevent="submit">

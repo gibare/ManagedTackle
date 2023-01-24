@@ -5,7 +5,7 @@ import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { Head, useForm } from '@inertiajs/inertia-vue3';
-import img from '@/images/changepage.png'
+import img from '@/Pages/images/changepage.png'
 
 const props = defineProps({
     email: String,
@@ -27,7 +27,7 @@ const submit = () => {
 </script>
 
 <template>
-    <img src="./images/changepage.png" alt="" class="change-img" />
+    <img src="@/Pages/images/changepage.png" alt="" class="change-img" />
     <GuestLayout id="section_form">
         <Head title="Reset Password" />
 

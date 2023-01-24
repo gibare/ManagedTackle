@@ -5,7 +5,7 @@ import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { Head, useForm } from '@inertiajs/inertia-vue3';
-import img from '@/images/changepage.png'
+import img from '@/Pages/images/changepage.png'
 
 defineProps({
     status: String,
@@ -32,7 +32,7 @@ const csrf = () =>
         <title>パスワードを忘れた方へ</title>
         <meta name="description" content="パスワード変更用のリンクを送信します。">
     </head>
-    <img src="../images/changepage.png" alt="" class="change-img" />
+    <img src="@/Pages/images/changepage.png" alt="" class="change-img" />
 
         <section id="sendform">
             <div class="form_background">
