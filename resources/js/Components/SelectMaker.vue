@@ -32,7 +32,7 @@ export default {
       makers: [ 
           { id: 1, name: 'SHIMANO（シマノ）' }, 
           { id: 2, name: 'DAIWA（ダイワ）' }, 
-          { id: 3, name: 'AbuGarucia' },
+          { id: 3, name: 'AbuGarucia（アブガルシア）' },
           { id: 4, name: 'Megabass' },
           { id: 5, name: 'deps'},
           { id: 6, name: 'EVERGREEN'},
