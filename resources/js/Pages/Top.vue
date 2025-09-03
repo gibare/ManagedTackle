@@ -6,9 +6,9 @@
         <meta name="description" content="TackleBoxは、釣りを愛するアングラ―の皆さんのタックル整理ツールです。">
     </head>
     <img src="@/Pages/images/Top.png" alt="" class="top-img" />
-  <layout title="TACKLE BOX">
+  <Layout title="TACKLE BOX">
 
-  </layout>
+  </Layout>
 </template>
 
 <script>
