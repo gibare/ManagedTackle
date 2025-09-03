@@ -11,78 +11,6 @@ html {
   html {
     font-size: 14px;
   }
-  html nav {
-    color: #06fd8a;
-  }
-  html nav ul button {
-    margin: 0;
-  }
-  html nav ul .nav__link_button {
-    background-color: transparent;
-    box-shadow: none;
-    font-size: 1.2em;
-    color: #06fd8a;
-  }
-  html nav ul .our_nav__link {
-    background-color: transparent;
-    box-shadow: none;
-    font-size: 1.2em;
-    color: #06fd8a;
-    padding: 0;
-  }
-  html nav ul li button {
-    background-color: transparent;
-    box-shadow: none;
-  }
-  html #tackleform {
-    width: 100%;
-    text-align: center;
-  }
-  html #tackleform .tackleinfo .info {
-    padding-left: 0;
-  }
-  html #tackleform .tackleinfo .info .photo {
-    text-align: center;
-    padding-right: 0;
-    float: unset;
-  }
-  html #tackleform .tackleinfo .info .photo img {
-    min-width: 20rem;
-    min-height: 15rem;
-    margin: auto;
-  }
-  html #tackleform .tackleinfo .info .photo input {
-    padding: 1rem;
-    margin: auto;
-  }
-  html #tackleform .fishinfo .info {
-    padding: 0;
-    text-align: unset;
-  }
-  html #tackleform .fishinfo .photo {
-    text-align: center;
-    padding: 0;
-    float: unset;
-  }
-  html #tackleform .fishinfo .photo img {
-    min-width: 20rem;
-    min-height: 15rem;
-    margin: auto;
-  }
-  html .ourTackle {
-    width: 100%;
-  }
-  html .ourTackle .ourPhoto {
-    display: block;
-  }
-  html .ourTackle table {
-    display: block;
-    text-align: left;
-  }
-  html .ourTackle table th {
-    text-align: center;
-    width: 15rem;
-  }
 }
 @media screen and (max-width: 600px) {
   html {
@@ -95,26 +23,23 @@ html {
   }
 }
 
-header {
-  text-align: center;
-}
-
 img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  min-height: 100%;
+  width: 100vw;
+  min-height: 100vh;
   position: absolute;
   background-size: cover;
   background-position: center center;
-  position: fixed;
 }
 
 nav {
   display: flex;
+  position: relative;
   color: #ffffff;
   height: 5rem;
   width: 100%;
+  left: 50px;
+  top: 16px;
+  border-radius: 10px;
 }
 nav :visited {
   color: inherit;
@@ -122,29 +47,32 @@ nav :visited {
 nav #tackle_home {
   color: #ffffff;
   height: 51px;
-  font-size: 3.5rem;
-  padding-top: 1rem;
+  left: 50px;
+  top: 21px;
+  border-radius: nullpx;
+  font-family: IBM Plex Mono;
+  font-size: 48px;
   font-weight: 700;
-  z-index: 50;
-  width: 100%;
+  line-height: 62px;
+  letter-spacing: 0em;
+  text-align: left;
 }
-nav #tackle_home .wrapper {
+nav .wrapper {
   padding: 0 10px;
   height: 51px;
   left: 1015px;
   top: 16px;
   border-radius: 10px;
   font-family: IBM Plex Mono;
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: 700;
   line-height: 26px;
   letter-spacing: 0em;
   text-align: left;
-  gap: 0.5rem;
+  margin-right: 23px;
   margin-left: auto;
-  z-index: 30;
 }
-nav #tackle_home .wrapper .text-blue-700 {
+nav .wrapper .text-blue-700 {
   line-height: 51px;
   padding-right: 46px;
   height: 23px;
@@ -165,7 +93,7 @@ form {
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  z-index: 30;
+  z-index: 3;
 }
 form #userform {
   width: 100%;
@@ -182,9 +110,8 @@ form #userform {
 form label {
   display: inline-block;
   text-align: right;
-  width: 12rem;
-  padding-right: 3.5rem;
-  gap: 1rem;
+  width: 10rem;
+  padding-right: 1rem;
 }
 form label .flex {
   display: block;
@@ -193,7 +120,7 @@ form input {
   display: inline-block;
   text-align: left;
   height: 2rem;
-  width: 13rem;
+  width: 10rem;
   border-radius: 5px;
   margin-bottom: 1rem;
   border: none;
@@ -223,10 +150,11 @@ form img {
 button {
   display: inline-block;
   border: none;
-  background: #21AF28;
+  background: #4EF469;
   height: 3rem;
   width: 10rem;
   border-radius: 10px;
+  padding: 0.75rem;
   box-shadow: 0px 7px 7px 7px rgba(0, 0, 0, 0.2509803922);
   color: rgba(255, 255, 255, 0.9098039216);
   font-family: IBM Plex Mono;
@@ -249,7 +177,6 @@ button :active {
 
 a {
   color: #ffffff;
-  text-decoration: none;
 }
 a :visited {
   color: inherit;
@@ -259,36 +186,26 @@ select {
   display: inline-block;
   text-align: left;
   height: 2rem;
-  width: 13rem;
+  width: 10rem;
   border-radius: 5px;
   margin-bottom: 1rem;
   border: none;
 }
 
 #section_form {
+  position: absolute;
+  color: #ffffff;
+  display: flex;
+  text-align: center;
   width: 100%;
   height: 100%;
-  position: absolute;
-  color: #0c0c0c;
-  text-align: center;
-  vertical-align: middle;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
   justify-content: center;
-}
-#section_form .change_form {
-  padding: 1rem;
-  background-color: rgba(170, 190, 189, 0.631372549);
-  border-radius: 14px;
-  opacity: 0.95;
 }
 
 #sendform {
   position: absolute;
   color: #ffffff;
   display: flex;
-  font-size: 1rem;
   text-align: center;
   width: 100%;
   height: 100%;
@@ -296,19 +213,18 @@ select {
   flex-flow: column;
 }
 #sendform .form_background {
-  background: rgba(96, 97, 97, 0.631372549);
+  background: rgba(170, 190, 189, 0.631372549);
 }
 
-.delete_form {
-  padding: 1rem;
+#delete_form {
   position: absolute;
   color: #ffffff;
   display: flex;
   text-align: center;
+  width: 100%;
+  height: 100%;
   flex-flow: column;
-  background-color: rgba(170, 190, 189, 0.631372549);
-  justify-content: center;
-  border-radius: 15px;
+  background: rgba(170, 190, 189, 0.631372549);
 }
 
 .p-6 {
@@ -322,149 +238,8 @@ select {
   flex-flow: column;
 }
 
-.delete_confirm {
-  position: absolute;
-  color: #ffffff;
-  display: flex;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  flex-flow: column;
-  z-index: 99;
-}
-.delete_confirm .confirm {
-  padding: 2rem;
-  background-color: #89898a;
-  color: #ffffff;
-  margin: auto;
-  border-radius: 15px;
-}
-.delete_confirm span {
-  padding: 2rem;
-}
-
 body {
   margin: 0;
   padding: 0;
 }
-
-.header {
-  position: relative;
-  padding: 0.5rem 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: space-between;
-  background: #0d0c15;
-  color: #fefefc;
-}
-.header__title {
-  margin: 0;
-  padding: 0.5rem;
-  font-size: 1.8rem;
-}
-
-.menu-button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  position: fixed;
-  top: calc((3.8rem - 44px) / 2);
-  right: 15px;
-  display: inline-block;
-  width: 50px;
-  height: 44px;
-  background: none;
-  border: none;
-  z-index: 50;
-  cursor: pointer;
-}
-.menu-button__bar {
-  position: absolute;
-  top: 0;
-  left: 10%;
-  display: inline-block;
-  width: 80%;
-  height: 4px;
-  border-radius: 4px;
-  background: #fefefc;
-  transition: all 0.4s;
-}
-.menu-button__bar--top {
-  top: 6px;
-}
-.menu-button__bar--center {
-  top: 20px;
-}
-.menu-button__bar--bottom {
-  top: 36px;
-}
-.menu-button.open .menu-button__bar--top {
-  top: 20px;
-  transform: rotate(-45deg);
-}
-.menu-button.open .menu-button__bar--center {
-  left: 50%;
-  opacity: 0;
-  transform: rotate(135deg);
-}
-.menu-button.open .menu-button__bar--bottom {
-  top: 20px;
-  transform: rotate(45deg);
-}
-
-.nav__list {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  text-transform: uppercase;
-  margin: auto;
-}
-.nav.sp-menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: 50px;
-  width: calc(100% - 100px);
-  height: calc(100vh - 100px);
-  background: #3c3946;
-  z-index: 40;
-}
-.nav.sp-menu .nav__list {
-  display: flex;
-  flex-direction: column;
-}
-.nav.sp-menu .nav__list > * + * {
-  margin-top: 1rem;
-}
-.nav__link {
-  color: inherit;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-  cursor: pointer;
-}
-.nav__link--current {
-  pointer-events: none;
-}
-.nav__link--current::after {
-  content: "";
-  position: absolute;
-  top: calc(50% - 2px);
-  left: 0;
-  width: 100%;
-  height: 2px;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-  transform: translateX(100%);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}/*# sourceMappingURL=Top_style.css.map */
+/*# sourceMappingURL=Top_style.css.map */
