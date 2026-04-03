@@ -22,10 +22,11 @@
     },
     "dependencies": {
         "braces": "^3.0.3",
+        "picomatch": "^4.0.4",
+        "rollup": "^4.52.4",
         "sass": "^1.56.2"
     },
     "overrides": {
-    "axios": "^1.13.2",
-    "immutable": "5.1.5"
-  }
+        "axios": "^1.13.2"
+    }
 }
